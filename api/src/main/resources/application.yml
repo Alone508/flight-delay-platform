@@ -1,0 +1,25 @@
+server:
+  port: 8080
+  address: 0.0.0.0
+
+spring:
+  application:
+    name: flight-delay-api
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/flight_delay?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC&characterEncoding=utf8
+    username: ${MYSQL_FLIGHT_USER:flight}
+    password: ${MYSQL_FLIGHT_PASSWORD:FlightDelay_2026}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 2
+  jackson:
+    time-zone: UTC
+    date-format: yyyy-MM-dd HH:mm:ss
+
+hbase:
+  rest-url: ${HBASE_REST_URL:http://localhost:8085}
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html

@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.pyc
+data/raw/*.csv
+data/logs/
+data/spark-local/
+data/spark-warehouse/
+data/weather/
+*.log
+*.pid
+scripts/env.local.sh
+node_modules/
+dist/
+target/
+.idea/
+.DS_Store

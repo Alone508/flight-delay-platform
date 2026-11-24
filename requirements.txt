@@ -1,0 +1,6 @@
+requests==2.34.2
+happybase==1.3.0
+kafka-python==2.2.15
+mysql-connector-python==8.4.0
+pandas==3.1.1
+pyarrow==26.0.1

@@ -1,0 +1,16 @@
+# 航班延误平台 HBase 表（幂等创建）
+# 执行：hbase shell sql/hbase_create.hbase
+
+unless exists 'flight_detail'
+  create 'flight_detail', {NAME => 'info', VERSIONS => 1, BLOCKCACHE => true}
+end
+
+unless exists 'airport_realtime'
+  create 'airport_realtime', {NAME => 'm', VERSIONS => 1}
+end
+
+unless exists 'delay_alerts'
+  create 'delay_alerts', {NAME => 'a', VERSIONS => 1}
+end
+
+list
